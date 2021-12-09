@@ -37,6 +37,15 @@
   retries: 5
   until: apt_install_common is success
 
+#- name: install docker
+#  shell: sh -c "$(curl -fsSL https://get.docker.com)"
+#- name: Set docker cgroupdriver to cgroupfs
+#  ansible.builtin.lineinfile:
+#   path: /etc/docker/daemon.json
+#   state: present
+#   regexp: 'native.cgroupdriver=cgroupfs'
+#   line: '{"exec-opts": ["native.cgroupdriver=cgroupfs"]}'
+
 - name: Copy 20auto-upgrades unattended-upgrades config
   ansible.builtin.blockinfile:
     path: /etc/apt/apt.conf.d/20auto-upgrades
