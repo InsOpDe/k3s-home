@@ -24,7 +24,7 @@ spec:
         enabled: true
         type: wireguard
         networkPolicy:
-          enabled: false
+          enabled: true
           egress:
             - to:
                 - ipBlock:
@@ -34,7 +34,16 @@ spec:
                 - port: 51820
                   protocol: UDP
             - to:
-                - namespaceSelector: {}
+                - ipBlock:
+                    cidr: 169.254.1.1/32
+                - ipBlock:
+                    cidr: 172.22.0.0/12
+                - ipBlock:
+                    cidr: 10.42.0.0/16
+                - ipBlock:
+                    cidr: 10.43.0.0/16
+                - ipBlock:
+                    cidr: 192.168.178.0/24
                 # Allow traffic within K8S - change if your K8S cluster uses a different CIDR
 #                - ipBlock:
 #                    cidr: 10.0.0.0/8
