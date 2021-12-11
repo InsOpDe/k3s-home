@@ -21,7 +21,7 @@ spec:
   values:
     addons:
       vpn:
-        enabled: true
+        enabled: false
         type: wireguard
         networkPolicy:
           enabled: false
