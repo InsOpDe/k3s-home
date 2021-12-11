@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: alpine
-          image: alpine
+          image: curlimages/curl
           command:
             - /bin/sh
             - -c
