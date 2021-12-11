@@ -14,6 +14,8 @@ spec:
       app: terminal
   template:
     metadata:
+      annotations:
+        setGateway: "true"
       labels:
         app: terminal
     spec:
