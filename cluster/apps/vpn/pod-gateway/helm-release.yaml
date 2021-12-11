@@ -44,20 +44,17 @@ spec:
                     cidr: 10.43.0.0/16
                 - ipBlock:
                     cidr: 192.168.178.0/24
-                # Allow traffic within K8S - change if your K8S cluster uses a different CIDR
-#                - ipBlock:
-#                    cidr: 10.0.0.0/8
         wireguard:
           image:
             repository: ghcr.io/k8s-at-home/wireguard
             tag: v1.0.20210914
             pullPolicy: IfNotPresent
-#        securityContext:
-#          runAsUser: 568
-#          runAsGroup: 568
-#          capabilities:
-#            drop:
-#              - "SYS_MODULE"
+        securityContext:
+          runAsUser: 568
+          runAsGroup: 568
+          capabilities:
+            drop:
+              - "SYS_MODULE"
         env:
           TZ: "Europe/Berlin"
           IPTABLES_BACKEND: nft
@@ -83,13 +80,16 @@ spec:
         label: "routed-gateway"
     settings:
       VPN_INTERFACE: wg0
-      VPN_BLOCK_OTHER_TRAFFIC: false
+      VPN_BLOCK_OTHER_TRAFFIC: true
       VPN_TRAFFIC_PORT: "51820"
       # Route internal K8s and local home traffic in to the defaullt K8S gateway
-#      NOT_ROUTED_TO_GATEWAY_CIDRS: "169.254.1.1/32 172.22.0.0/12 10.42.0.0/16 10.43.0.0/16 192.168.178.0/24"
-      NOT_ROUTED_TO_GATEWAY_CIDRS: "169.254.1.1/32 172.16.0.0/12 10.0.0.0/8 192.168.0.0/16"
-#      VPN_LOCAL_CIDRS: "169.254.1.1/32 172.22.0.0/12 10.42.0.0/16 10.43.0.0/16 192.168.178.0/24"
-      VPN_LOCAL_CIDRS: "169.254.1.1/32 172.16.0.0/12 10.0.0.0/8 192.168.0.0/16"
+      # 169.254.1.1 fritz router
+      # 172.16.0.0 vxlan
+      # 192.168.178.0 home lan
+      # 10.42.0.0 cluster cidr
+      # 10.43.0.0 service cidr
+      NOT_ROUTED_TO_GATEWAY_CIDRS: "169.254.1.1/32 172.16.0.0/12 10.42.0.0/16 10.43.0.0/16 192.168.178.0/24"
+      VPN_LOCAL_CIDRS: "169.254.1.1/32 172.16.0.0/12 10.42.0.0/16 10.43.0.0/16 192.168.178.0/24"
       # Use a different VXLAN network segment that does not conflict with the above
 #      VXLAN_IP_NETWORK: "192.168.242"
 #      VXLAN_ID: 43
