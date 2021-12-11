@@ -61,7 +61,7 @@ spec:
         env:
           TZ: "Europe/Berlin"
           IPTABLES_BACKEND: nft
-          KILLSWITCH: "false"
+          KILLSWITCH: "true"
         configFileSecret: vpn-gateway-vpnconfig-wg-mullvad-fi1
         resources:
           requests:
