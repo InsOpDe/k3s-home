@@ -42,4 +42,4 @@ spec:
       # Use a different VXLAN network segment that does not conflict with the above
 #      VXLAN_IP_NETWORK: "192.168.242"
     routed_namespaces:
-      - vpn
+      - media
