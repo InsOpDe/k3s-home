@@ -19,6 +19,25 @@ spec:
 
   # See https://github.com/k8s-at-home/charts/blob/master/charts/pod-gateway/values.yaml
   values:
+    addons:
+      vpn:
+        enabled: true
+        type: wireguard
+        wireguard:
+          image:
+            repository: ghcr.io/k8s-at-home/wireguard
+            tag: v1.0.20210914
+        env:
+          TZ: "Europe/Berlin"
+          IPTABLES_BACKEND: nft
+          KILLSWITCH: "false"
+        configFileSecret: vpn-gateway-vpnconfig-wg-mullvad-fi1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            memory: 512Mi
     image:
       repository: ghcr.io/k8s-at-home/pod-gateway
       tag: v1.4.0
@@ -30,8 +49,10 @@ spec:
 #      gatewayLabel: setGateway
 #      gatewayAnnotation: setGateway
 #      namespaceSelector:
-#        label: "vpn-routed-gateway"
+#        label: "routed-gateway"
     settings:
+      VPN_INTERFACE: wg0
+      VPN_BLOCK_OTHER_TRAFFIC: true
       # Route internal K8s and local home traffic in to the defaullt K8S gateway
 #      NOT_ROUTED_TO_GATEWAY_CIDRS: "192.168.178.0/24"
 #      NOT_ROUTED_TO_GATEWAY_CIDRS: "172.22.0.0/12 192.168.178.0/24"

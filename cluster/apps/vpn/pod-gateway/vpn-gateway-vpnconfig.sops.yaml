@@ -1,0 +1,28 @@
+# yamllint disable
+apiVersion: v1
+kind: Secret
+metadata:
+    name: vpn-gateway-vpnconfig-wg-mullvad-fi1
+type: Opaque
+data:
+    key: ENC[AES256_GCM,data:26SnlLhlDZsnTZMcjBnjM/nRiN2r6TAetZ3mL2smzoSoL08nfF/VwrgBd4K+E6ILiUV3bxzHfMWCDVFeCREd7JWBoEmilQ1WT0QbSsR8JnBeME0BQiw9v8ya7pWGlj/NHY94r2sXXRl3fN3fPrhYUCd5s+vKLIlSd2bxgvO8+T8h6rq4EuP/qnaw4AMeVXukJjTCqQiJrCv8rXRNLSJ07JcMv782ZQ2yvAskv6m4ggnj8QRjyCx0RwYobS7kaLZTo8BrOHAr2N9wov+0Kn93f7Y7LdWJvzQPmfBuIoY6RaUdkmYfFd8GA8KoWLifQouA3CgiejphblsP6atD5SMCJA+PsXW7k++RRO/rKcObiY/uk64nV36Y6uwBxaSeTtPjiLWNZXZbjMpJCwXUHlVujP1fb/Oxi7SgF1v5EaOjxIY8SXkbGuntxyD6RQEgxh1lV3C0FQxRH4G909LGGzYJvxKoJ9hBcK6UG/wPwXxSIoqW2qURMk1P0AWH5Rr27QVpJynIJuxnbQShNekDsYuYQFJx41rMs8FAFQmNn0pa084VxF77r2VmGbx2makQ6Y/jlyR2OHN+JJOwJw0Gok5xa0aSbHY7v9NfZQZQvmOQ3UBdpaaypFZDTruuKXpJe9c9+n8XdIXh7eIHQOFXYuMWwlG7KrrkbWEwtSBWZqvRNErP59tSQCKyKnPYjpuyGqJZZJX4wgBw1MmUzqZ2hSMwdUeAhe2j+PBpEIs3NFae44RrvYgJxTPXS4rSPRSyh/PCV6LR+0K+KHD0oj1XX2hTrT6wGc1cs48k0KfYxAbpM1fz2sMtb49b8n0Ae1DapaCtznSYuo4wCb53wQ/9YTFsBzwGc7ZYHXhXtZb4BY20MO1VzTN41/T9l9lp7qh7XR0ezOwMxhUv8y0Cwys6zdcRH9Ut7+OKPTZa/un2ylEHQg4Lszvv3w9SkXcxUpquop4sbD9g0C0fngktWFUX5ZUVuH32AIniEyMO4LYwkyKZkeB9t6rRmS57YMyEQkMQ14yXaKG0UaFqxPV3R3e9U1y+C1gsL7rTSZButBryunpsxK3SFgHnhit9GExHTzHAF5xfmIp12G3pwyP3daeH6EP/2JEscDGkH+rmqEpm+UrftMRMjfwV4Pg3OIcapEFY3e08iMczvukMkwvLFlF9U4beoFGMAa+6lxy96UN6O96JDVv3DmNbpTcRehjqdpVzxTSuskRHlVY8+VKJ6HR7Vg3/ZjV9tjV081OwU5/x3/eGdroIMFoQRTiSsyoozDh5wnyVrhymPwihlRmb8O0SXwlIjtOAmXE=,iv:Rx7AYWerkU8RjlyBXgheTYlg/LzlXMI2ge/WFkQnuJE=,tag:tqnKVrfnQ4piVHk7SLLOig==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1t8gfvnm555sddz6vczj028stv4wksgak7jp72anjtcsfplzxxuesxpq4w2
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5VEU2NGpOL3Rhb0JvWGk4
+            b09nT3NWR1dxN0RQcVVHNGo0aTZBTERPTlZrCmRIVHQ3Z09VZ1E2WmJlbXZUdjhY
+            VnBzSkNNaDU0bDBYcjUwNEJVUmovSGcKLS0tIGIxeVUrQU9sTEVQcEdXZjdZZUJK
+            b2EwMmE2TG9UdnJOaHVTNmdJVXFIbDQKaiewxKohdZtXGXrFO3XRoorjgzKPFMHM
+            KyaykALli52UWXUiLszK3LHq8wwV+GbwFr8UoEOuSMaIk1LEfXauRg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2021-12-11T09:22:03Z"
+    mac: ENC[AES256_GCM,data:mFo6oBdl1e7o6Wd0GnD83ZmjYx4rF6uG6JiAg7Ai9yzbqxK9cUPbcG0pgChBh1P3gK/51ILJ/bE6abVlVHmCFDoq8MmQ+jfuMcPkV5gUYafY7LFn13/EC5Zt8/RqQJ1D2bsiULeYNezKBbLJf6d2ovgfO5Ek1vO+BJqBZuq+R9M=,iv:uBD2CpIIpcicOTt8Lj9gwe+t2cXvrOEhy95isoX6hIY=,tag:Ocf4H5eb8WopBId4aRf5Nw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
