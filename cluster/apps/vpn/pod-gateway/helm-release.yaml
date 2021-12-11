@@ -85,7 +85,7 @@ spec:
 #      VPN_LOCAL_CIDRS: "172.22.0.0/12 192.168.178.0/24"
       # Use a different VXLAN network segment that does not conflict with the above
 #      VXLAN_IP_NETWORK: "192.168.242"
-      VXLAN_ID: 43
+#      VXLAN_ID: 43
       VXLAN_IP_NETWORK: 172.16.1
     routed_namespaces:
       - media
