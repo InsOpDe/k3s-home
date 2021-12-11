@@ -23,36 +23,36 @@ spec:
       vpn:
         enabled: true
         type: wireguard
-        networkPolicy:
-          enabled: true
-          egress:
-            - to:
-                - ipBlock:
-                    cidr: 0.0.0.0/0
-              ports:
-                # VPN traffic port - change if your provider uses a different port
-                - port: 443
-                  protocol: UDP
-            - to:
-                - namespaceSelector: {}
-                # Allow traffic within K8S - change if your K8S cluster uses a different CIDR
+#        networkPolicy:
+#          enabled: true
+#          egress:
+#            - to:
 #                - ipBlock:
-#                    cidr: 10.0.0.0/8
+#                    cidr: 0.0.0.0/0
+#              ports:
+#                # VPN traffic port - change if your provider uses a different port
+#                - port: 443
+#                  protocol: UDP
+#            - to:
+#                - namespaceSelector: {}
+#                # Allow traffic within K8S - change if your K8S cluster uses a different CIDR
+##                - ipBlock:
+##                    cidr: 10.0.0.0/8
         wireguard:
           image:
             repository: ghcr.io/k8s-at-home/wireguard
             tag: v1.0.20210914
             pullPolicy: IfNotPresent
-        securityContext:
-          runAsUser: 568
-          runAsGroup: 568
-          capabilities:
-            drop:
-              - "SYS_MODULE"
-        env:
-          TZ: "Europe/Berlin"
-          IPTABLES_BACKEND: nft
-          KILLSWITCH: "false"
+#        securityContext:
+#          runAsUser: 568
+#          runAsGroup: 568
+#          capabilities:
+#            drop:
+#              - "SYS_MODULE"
+#        env:
+#          TZ: "Europe/Berlin"
+#          IPTABLES_BACKEND: nft
+#          KILLSWITCH: "false"
         configFileSecret: vpn-gateway-vpnconfig-wg-mullvad-fi1
         resources:
           requests:
