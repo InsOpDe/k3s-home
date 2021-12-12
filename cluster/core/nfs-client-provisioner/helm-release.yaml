@@ -16,10 +16,11 @@ spec:
         name: nfs-subdir-external-provisioner-charts
         namespace: flux-system
       interval: 5m
-  # https://github.com/ckotzbauer/helm-charts/tree/main/charts/nfs-client-provisioner
+  # https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md
   values:
     nfs:
       server: 192.168.178.101
       path: /volume1/k3s-home
     storageClass:
+      name: nfs-client
       defaultClass: true
