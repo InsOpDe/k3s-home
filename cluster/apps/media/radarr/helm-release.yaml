@@ -75,9 +75,9 @@ spec:
             server: "${NAS_ADDR}"
             path: /volume1/media
         mountPath: /media
-#    resources:
+    resources:
 #      requests:
 #        memory: 250Mi
 #        cpu: 500m
-#      limits:
-#        memory: 1500Mi
+      limits:
+        memory: 1500Mi
