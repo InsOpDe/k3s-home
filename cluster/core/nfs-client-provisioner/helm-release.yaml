@@ -18,6 +18,13 @@ spec:
       interval: 5m
   # https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md
   values:
+    resources:
+      requests:
+        cpu: 20m
+        memory: 32Mi
+      limits:
+        cpu: 50m
+        memory: 64Mi
     nfs:
       server: 192.168.178.101
       path: /volume1/k3s-home

@@ -15,7 +15,24 @@ spec:
         kind: HelmRepository
         name: metallb-charts
         namespace: flux-system
+  # https://github.com/helm/charts/blob/master/stable/metallb/values.yaml
   values:
+    controller:
+      resources:
+        requests:
+          cpu: 20m
+          memory: 32Mi
+        limits:
+          cpu: 50m
+          memory: 64Mi
+    speaker:
+      resources:
+        requests:
+          cpu: 20m
+          memory: 32Mi
+        limits:
+          cpu: 50m
+          memory: 64Mi
     configInline:
       address-pools:
         - name: default

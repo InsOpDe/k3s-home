@@ -79,8 +79,9 @@ spec:
             path: /volume1/media
         mountPath: /media
     resources:
-#      requests:
-#        memory: 250Mi
-#        cpu: 500m
+      requests:
+        cpu: 100m
+        memory: 250Mi
       limits:
-        memory: 1500Mi
+        cpu: 200m
+        memory: 500Mi

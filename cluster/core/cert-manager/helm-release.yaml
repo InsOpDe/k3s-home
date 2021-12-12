@@ -15,10 +15,33 @@ spec:
         kind: HelmRepository
         name: jetstack-charts
         namespace: flux-system
+  # https://github.com/jetstack/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
   values:
     installCRDs: false
+    resources:
+      requests:
+        cpu: 10m
+        memory: 32Mi
+      limits:
+        cpu: 50m
+        memory: 64Mi
+    cainjector:
+      resources:
+        requests:
+          cpu: 10m
+          memory: 32Mi
+        limits:
+          cpu: 50m
+          memory: 64Mi
     webhook:
       enabled: true
+      resources:
+        requests:
+          cpu: 10m
+          memory: 32Mi
+        limits:
+          cpu: 50m
+          memory: 64Mi
     extraArgs:
       - --dns01-recursive-nameservers=1.1.1.1:53,9.9.9.9:53
       - --dns01-recursive-nameservers-only
