@@ -32,7 +32,7 @@ spec:
           memory: 64Mi
         limits:
           cpu: 100m
-          memory: 128Mi
+          memory: 256Mi
     webhook:
       enabled: true
       resources:
