@@ -28,11 +28,11 @@ spec:
     speaker:
       resources:
         requests:
-          cpu: 20m
-          memory: 32Mi
-        limits:
-          cpu: 50m
+          cpu: 30m
           memory: 64Mi
+        limits:
+          cpu: 60m
+          memory: 128Mi
     configInline:
       address-pools:
         - name: default
