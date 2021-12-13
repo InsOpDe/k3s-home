@@ -6,7 +6,7 @@ resources:
   - jellyfin
   - jackett
   - readarr
-#  - sonarr
+  - sonarr
 #  - vpn-terminal
 #  - plex
 #  - pvc
