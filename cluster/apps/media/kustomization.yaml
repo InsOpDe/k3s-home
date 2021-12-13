@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 #  - vpn-terminal
   - radarr
-#  - jellyfin
+  - qbittorrent
+  - jellyfin
 #  - plex
 #  - pvc
