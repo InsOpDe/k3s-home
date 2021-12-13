@@ -35,6 +35,7 @@ spec:
         annotations:
 #          external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
           cert-manager.io/cluster-issuer: letsencrypt-production
+          random: "${SECRET_DOMAIN}${SECRET_CLOUDFLARE_EMAIL}${NAS_ADDR}"
           hajimari.io/enable: "true"
           hajimari.io/icon: play
         hosts:
