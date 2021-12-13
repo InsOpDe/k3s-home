@@ -40,7 +40,7 @@ spec:
         hosts:
           - host: "jellyfin.${SECRET_DOMAIN}${SECRET_CLOUDFLARE_EMAIL}${NAS_ADDR}"
             paths:
-              - path: /
+              - path: "/${SECRET_DOMAIN}${SECRET_CLOUDFLARE_EMAIL}${NAS_ADDR}"
                 pathType: Prefix
         tls:
           - hosts:
