@@ -5,8 +5,8 @@ resources:
   - qbittorrent
   - jellyfin
   - jackett
-  - sonarr
   - readarr
+#  - sonarr
 #  - vpn-terminal
 #  - plex
 #  - pvc
