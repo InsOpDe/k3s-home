@@ -108,12 +108,3 @@ resource "cloudflare_record" "hajimari" {
   type    = "CNAME"
   ttl     = 1
 }
-
-resource "cloudflare_record" "radarr" {
-  name    = "radarr"
-  zone_id = lookup(data.cloudflare_zones.domain.zones[0], "id")
-  value   = "ipv4.${data.sops_file.cloudflare_secrets.data["cloudflare_domain"]}"
-  proxied = true
-  type    = "CNAME"
-  ttl     = 1
-}
