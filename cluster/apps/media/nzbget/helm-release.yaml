@@ -54,10 +54,10 @@ spec:
             server: "${NAS_ADDR}"
             path: /volume1/media
         mountPath: /media
-    podSecurityContext:
-      runAsUser: 1001
-      runAsGroup: 1001
-      fsGroup: 1001
+#    podSecurityContext:
+#      runAsUser: 1001
+#      runAsGroup: 1001
+#      fsGroup: 1001
 #    podAnnotations:
 #      backup.velero.io/backup-volumes: config
 #    tolerations:
