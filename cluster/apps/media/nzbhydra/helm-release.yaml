@@ -32,6 +32,8 @@ spec:
         ingressClassName: "traefik"
         annotations:
 #          kubernetes.io/tls-acme: "true"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: nfc-search-variant
           cert-manager.io/cluster-issuer: letsencrypt-production
 #          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
 #          traefik.ingress.kubernetes.io/router.middlewares: "network-internal-auth@kubernetescrd"
