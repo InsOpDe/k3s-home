@@ -69,6 +69,7 @@ spec:
         tls:
           - hosts:
               - "qb.${SECRET_DOMAIN}"
+            secretName: "qbittorrent-tls"
     metrics:
       enabled: false
       exporter:
