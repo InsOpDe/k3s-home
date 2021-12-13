@@ -13,13 +13,15 @@ spec:
       version: 9.2.0
       sourceRef:
         kind: HelmRepository
-        name: k8s-at-home
+        name: k8s-at-home-charts
         namespace: flux-system
+      interval: 5m
   values:
     image:
       repository: jellyfin/jellyfin
       tag: 10.7.7
     env:
+      TZ: "Europe/Berlin"
       JELLYFIN_CACHE_DIR: /config/cache
     podSecurityContext:
       supplementalGroups:
