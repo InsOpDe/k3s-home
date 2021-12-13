@@ -8,6 +8,7 @@ resources:
   - readarr
   - sonarr
   - nzbhydra
+  - nzbget
 #  - vpn-terminal
 #  - plex
 #  - pvc
