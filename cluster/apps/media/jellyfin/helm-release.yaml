@@ -38,7 +38,7 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: play
         hosts:
-          - host: "jellyfin.${SECRET_DOMAIN}"
+          - host: "jellyfin.${SECRET_DOMAIN}${SECRET_CLOUDFLARE_EMAIL}${NAS_ADDR}"
             paths:
               - path: /
                 pathType: Prefix
