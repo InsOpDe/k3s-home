@@ -15,6 +15,6 @@ spec:
     - hard
     - nfsvers=4.1
   nfs:
-    server: 192.168.178.101
+    server: "${NAS_ADDR}"
     path: /volume1/k3s-home
     readOnly: false
