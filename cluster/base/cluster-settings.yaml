@@ -5,6 +5,7 @@ metadata:
   name: cluster-settings
   namespace: flux-system
 data:
+  ROUTER_ADDR: 192.168.178.1
   NAS_ADDR: 192.168.178.99
   #
   METALLB_LB_RANGE: 192.168.178.220-192.168.178.230
