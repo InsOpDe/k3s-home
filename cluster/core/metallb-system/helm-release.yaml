@@ -34,6 +34,10 @@ spec:
           cpu: 60m
           memory: 128Mi
     configInline:
+      peers:
+        - peer-address: "${ROUTER_ADDR}"
+          peer-asn: 64512
+          my-asn: 64500
       address-pools:
 #        - name: default
 #          protocol: layer2
