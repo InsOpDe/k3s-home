@@ -70,6 +70,14 @@ spec:
     image:
       repository: ghcr.io/k8s-at-home/pod-gateway
       tag: v1.4.0
+    publicPorts:
+      - hostname: qbittorrent
+        IP: 21
+        ports:
+          - type: tcp
+            port: "56059"
+          - type: udp
+            port: "56059"
     webhook:
       image:
         repository: ghcr.io/k8s-at-home/gateway-admision-controller
