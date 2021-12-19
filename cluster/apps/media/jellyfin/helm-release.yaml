@@ -88,7 +88,7 @@ spec:
           nodeSelectorTerms:
             - matchExpressions:
                 - key: "kind"
-                  operator: "Equal"
+                  operator: "In"
                   values:
                     - "desktop"
     resources:
