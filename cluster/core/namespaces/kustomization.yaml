@@ -4,5 +4,6 @@ resources:
   - cert-manager.yaml
   - metallb-system.yaml
   - networking.yaml
+  - download.yaml
   - vpn.yaml
   - media.yaml

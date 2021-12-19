@@ -2,13 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - radarr
-  - qbittorrent
   - jellyfin
-  - jackett
   - readarr
   - sonarr
-  - nzbhydra
-  - nzbget
 #  - vpn-terminal
 #  - plex
 #  - pvc

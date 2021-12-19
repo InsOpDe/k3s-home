@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: media
+  namespace: download
   name: vpn-terminal
   labels:
     app: terminal
