@@ -27,8 +27,8 @@ spec:
               cpu: 20m
               memory: 32Mi
             limits:
-              cpu: 50m
-              memory: 64Mi
+              cpu: 200m
+              memory: 128Mi
           args:
             - manager
           env:
