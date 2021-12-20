@@ -30,7 +30,7 @@ spec:
           http:
             port: 8080
       bittorrent:
-        enabled: true
+        enabled: false
         type: LoadBalancer
 #        externalIPs:
 #          - "${SVC_QBITTORRENT_ADDR}"
