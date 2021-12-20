@@ -1,4 +1,5 @@
 ---
+# @link https://gist.github.com/smira/2e55ba71a59e0250d2c23532acb8e275
 apiVersion: operator.tigera.io/v1
 kind: Installation
 metadata:
@@ -6,6 +7,7 @@ metadata:
 spec:
 #  imagePath: quay.io/tigera/operator:v1.24.0
   calicoNetwork:
+    bgp: Disabled
     # Note: The ipPools section cannot be modified post-install.
     ipPools:
       - blockSize: 26

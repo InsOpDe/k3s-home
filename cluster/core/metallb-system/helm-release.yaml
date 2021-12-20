@@ -34,16 +34,8 @@ spec:
           cpu: 60m
           memory: 128Mi
     configInline:
-#      peers:
-#        - peer-address: "${ROUTER_ADDR}"
-#          peer-asn: 64512
-#          my-asn: 64513
       address-pools:
         - name: default
           protocol: layer2
           addresses:
             - "${METALLB_LB_RANGE}"
-#        - name: default
-#          protocol: bgp
-#          addresses:
-#            - "${METALLB_LB_RANGE}"
