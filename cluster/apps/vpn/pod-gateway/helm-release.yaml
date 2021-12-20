@@ -104,4 +104,4 @@ spec:
 #      VXLAN_ID: 43
 #      VXLAN_IP_NETWORK: 172.16.1
     routed_namespaces:
-      - media
+      - download
