@@ -51,8 +51,8 @@ spec:
                     cidr: 10.32.0.0/16
                 - ipBlock:
                     cidr: 10.33.0.0/16
-                - ipBlock:
-                    cidr: 192.168.178.0/24
+#                - ipBlock:
+#                    cidr: 192.168.178.0/24
         wireguard:
           image:
             repository: ghcr.io/k8s-at-home/wireguard
