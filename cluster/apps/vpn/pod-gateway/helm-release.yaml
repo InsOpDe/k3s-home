@@ -97,7 +97,7 @@ spec:
       namespaceSelector:
         label: "routed-gateway"
     settings:
-      VPN_INTERFACE: wg0
+#      VPN_INTERFACE: wg0
       VPN_BLOCK_OTHER_TRAFFIC: true
       VPN_TRAFFIC_PORT: "51820"
       # Route internal K8s and local home traffic in to the defaullt K8S gateway
