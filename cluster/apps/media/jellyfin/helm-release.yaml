@@ -43,6 +43,13 @@ spec:
             paths:
               - path: "/"
                 pathType: Prefix
+          - host: "jellyfin-server.${SECRET_DOMAIN}"
+            paths:
+              - path: "/"
+                backend:
+                  serviceName: jellyfin
+                  servicePort: 8096
+                pathType: Prefix
         tls:
           - hosts:
               - "jellyfin.${SECRET_DOMAIN}"
