@@ -20,6 +20,7 @@ spec:
     image:
       repository: jellyfin/jellyfin
       tag: 10.7.7
+      imagePullPolicy: IfNotPresent
     env:
       TZ: "Europe/Berlin"
       JELLYFIN_CACHE_DIR: /config/cache
