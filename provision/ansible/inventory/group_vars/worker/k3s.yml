@@ -15,6 +15,8 @@ k3s_agent:
     - "feature-gates=MixedProtocolLBService=true"
     - "node-taint=kind=vm:NoSchedule"
     - "node-label=kind=vm"
+    # controling eviction for VMs
+    - "eviction-hard=nodefs.available<1Gi,imagefs.available<1Gi"
     # Reserving Memory
 #    - "system-reserved=cpu=500m,memory=256Mi"
 #    - "kube-reserved=cpu=1000m,memory=256Mi"
