@@ -20,7 +20,7 @@ spec:
     tolerations:
       - key: "kind"
         operator: "Equal"
-        value: "desktop"
+        value: "vm"
         effect: "NoSchedule"
     affinity:
       nodeAffinity:
@@ -30,7 +30,7 @@ spec:
                 - key: "kind"
                   operator: "In"
                   values:
-                    - "desktop"
+                    - "vm"
     image:
       repository: ghcr.io/k8s-at-home/sonarr
       tag: v3.0.6.1342

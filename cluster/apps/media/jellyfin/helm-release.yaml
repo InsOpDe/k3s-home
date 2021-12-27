@@ -80,7 +80,7 @@ spec:
     tolerations:
       - key: "kind"
         operator: "Equal"
-        value: "desktop"
+        value: "vm"
         effect: "NoSchedule"
     affinity:
       nodeAffinity:
@@ -90,7 +90,7 @@ spec:
                 - key: "kind"
                   operator: "In"
                   values:
-                    - "desktop"
+                    - "vm"
     resources:
       requests:
         #        gpu.intel.com/i915: 1
