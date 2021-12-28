@@ -93,6 +93,19 @@ spec:
 #            mountPath: /config
 #        securityContext:
 #          privileged: true
+    ports:
+      - containerPort: 8096
+        name: http-tcp
+        protocol: TCP
+      - containerPort: 8920
+        name: https-tcp
+        protocol: TCP
+      - containerPort: 1900
+        name: dlna-udp
+        protocol: UDP
+      - containerPort: 7359
+        name: discovery-udp
+        protocol: TCP
     tolerations:
       - key: "kind"
         operator: "Equal"
