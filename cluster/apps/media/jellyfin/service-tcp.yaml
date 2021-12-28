@@ -1,0 +1,24 @@
+# from https://www.debontonline.com/2021/11/kubernetes-part-16-deploy-jellyfin.html
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: jellyfin-tcp
+  namespace: media
+  annotations:
+    metallb.universe.tf/allow-shared-ip: jellyfin
+spec:
+  selector:
+    app.kubernetes.io/instance: jellyfin
+    app.kubernetes.io/name: jellyfin
+  ports:
+    - port: 8096
+      targetPort: 8096
+      name: http-tcp
+      protocol: TCP
+    - port: 8920
+      targetPort: 8920
+      name: https-tcp
+  type: LoadBalancer
+  loadBalancerIP: 192.168.178.222
+  sessionAffinity: ClientIP

@@ -17,14 +17,14 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    service:
-      main:
-        enabled: false
-        type: LoadBalancer
-        loadBalancerIP: 192.168.178.222
-        externalTrafficPolicy: Local
-        annotations:
-          metallb.universe.tf/allow-shared-ip: jellyfin
+#    service:
+#      main:
+#        enabled: false
+#        type: LoadBalancer
+#        loadBalancerIP: 192.168.178.222
+#        externalTrafficPolicy: Local
+#        annotations:
+#          metallb.universe.tf/allow-shared-ip: jellyfin
     image:
       repository: jellyfin/jellyfin
       tag: 10.7.7
@@ -51,13 +51,13 @@ spec:
             paths:
               - path: "/"
                 pathType: Prefix
-          - host: "jellyfin-server.${SECRET_DOMAIN}"
-            paths:
-              - path: "/"
-                backend:
-                  serviceName: jellyfin
-                  servicePort: 8096
-                pathType: Prefix
+#          - host: "jellyfin-server.${SECRET_DOMAIN}"
+#            paths:
+#              - path: "/"
+#                backend:
+#                  serviceName: jellyfin
+#                  servicePort: 8096
+#                pathType: Prefix
         tls:
           - hosts:
               - "jellyfin.${SECRET_DOMAIN}"
