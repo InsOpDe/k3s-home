@@ -14,12 +14,10 @@ spec:
   ports:
     - port: 8096
       targetPort: 8096
-      nodePort: 8096
       name: http-tcp
       protocol: TCP
     - port: 8920
       targetPort: 8920
-      nodePort: 8920
       name: https-tcp
   type: LoadBalancer
   loadBalancerIP: 192.168.178.222
