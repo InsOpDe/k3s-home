@@ -45,7 +45,7 @@ spec:
         volumeSpec:
           nfs:
             server: "${NAS_ADDR}"
-            path: /volume1/syncthing
+            path: /volume1/syncthing/syncthing
         mountPath: /var/syncthing
     resources:
       requests:
